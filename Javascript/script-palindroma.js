@@ -6,7 +6,8 @@ const btn = document.querySelector ('.btn-primary')
 btn.addEventListener('click', function uguaglianza (str) {
 
     let parolaUtente = document.getElementById('parola').value;
-    parolaUtente ='';
+    
+    console.log(parolaUtente)
     
     let stringa = parolaUtente.split('')
     console.log(stringa)
@@ -17,8 +18,9 @@ btn.addEventListener('click', function uguaglianza (str) {
     
     
     let write;
-    if (stringa === reverseStringa){
+    if (parolaUtente === joinStringa){
         write = 'è una parola palindroma '
+        
         console.log (write)
         
     } else {
@@ -27,4 +29,3 @@ btn.addEventListener('click', function uguaglianza (str) {
     }
 })
 
-const parolaUtente = 'osso, anna, otto';
