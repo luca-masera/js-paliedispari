@@ -23,6 +23,7 @@ button.addEventListener('click', function(){
     let numeroComputer = getRndInteger (1,5)
     console.log(numeroComputer)
 
-    let risultato = numeroUtente + numeroComputer;
-    console.log(risultato);
+   
+    let somma = parseInt(numeroUtente) + parseInt(numeroComputer);
+    console.log(somma);
 })
