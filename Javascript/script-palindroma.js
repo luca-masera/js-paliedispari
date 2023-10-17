@@ -1,9 +1,15 @@
 
 
 const btn = document.querySelector ('.btn-primary')
+let list =[];
 
-btn.addEventListener('click', function palindroma() {
+btn.addEventListener('click', function confrontaParola(confronta) {
 
     let parolaUtente = document.getElementById('parola').value;
-    console.log (parolaUtente);
+    
+    let stringa = parolaUtente.split('').reverse().join('')
+    console.log(stringa)
+    
+
 })
+
