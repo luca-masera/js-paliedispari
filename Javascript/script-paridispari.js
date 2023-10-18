@@ -3,8 +3,12 @@
 const button = document.querySelector ('.btn-danger')
 
 button.addEventListener('click', function(){
-    let pariDispari = document.getElementById('input').value;
+    const pariDispari = document.getElementById('input').value;
     console.log(pariDispari)
+    const pari = document.getElementById('pari').value;
+    console.log(pari);
+    const dispari =document.getElementById('dispari').value;
+    console.log(dispari);
     let numeroUtente = document.getElementById('numero').value;
     console.log(numeroUtente);
    
@@ -33,15 +37,24 @@ button.addEventListener('click', function(){
     let scritta = ''; 
     
 
-    if (somma % 2 === 0){
-        scritta = 'la somma è pari'
+    if (somma % 2 === 0 && pariDispari === pari){
+        scritta = 'la somma è pari, l/utente ha vinto'
     
         console.log(scritta)
         
-    } else if (somma % 2 !==0) {
-        scritta = 'La somma è dispari'
+    } else if (somma % 2 !==0 && pariDispari === dispari) {
+        scritta = 'La somma è dispari, l/utente ha vinto'
         console.log(scritta)        
+        
+    } 
+    
+    let vincitore =''
+    
+    if (somma % 2 === 0 || pariDispari === dispari){
+        vincitore = 'la somma è pari, il computer ha vinto'
+        
+    }else if (somma % 2 !==0 || pariDispari === pari){
+        vincitore = 'la somma è dispari, il computer ha vinto'
     }
-
 
 })
